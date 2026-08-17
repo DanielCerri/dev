@@ -326,6 +326,45 @@
       font-weight: 700;
     }
 
+    /* GALERIA CASA ABERTA */
+    .gallery-card {
+      cursor: pointer;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border-color);
+      aspect-ratio: 4 / 3;
+      background-color: #0F172A;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.08);
+      filter: brightness(0.7);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.3) 65%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.25rem;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-card:hover .gallery-overlay {
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.4) 100%);
+    }
+
     /* PROJETOS */
     .card-project {
       border: 1px solid var(--border-color);
@@ -438,7 +477,7 @@
       <div class="container-fluid max-w-1200 px-3">
         <a href="#" class="brand">
           <img src="./images/rocket.gif" alt="Logo SENAI" width="32" height="32" class="rounded-circle bg-white p-1">
-          <span>SENAI SP</span>
+          <span>SENAI SP- Rio Claro</span>
         </a>
 
         <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSenaiNav" aria-controls="navbarSenaiNav" aria-expanded="false" aria-label="Alternar navegação">
@@ -461,6 +500,9 @@
             </li>
             <li class="nav-item">
               <a href="#turmas" class="nav-link-custom">Turmas do Curso</a>
+            </li>
+            <li class="nav-item">
+              <a href="#casa-aberta" class="nav-link-custom">Casa Aberta</a>
             </li>
             <li class="nav-item">
               <a href="#projetos" class="nav-link-custom">Projetos Desenvolvidos pelos Alunos</a>
@@ -548,7 +590,7 @@
             <ul class="list-unstyled small text-secondary m-0 d-flex flex-column gap-2">
               <li><i class="fa-solid fa-check text-danger me-2"></i><strong>Foco:</strong> Portabilidade e interatividade por gestos.</li>
               <li><i class="fa-solid fa-check text-danger me-2"></i><strong>Recursos:</strong> Sensores (GPS, câmera), notificações e banco offline.</li>
-              <li><i class="fa-solid fa-check text-danger me-2"></i><strong>Componentes:</strong> Frameworks como .NET MAUI, layouts táticos e SQLite.</li>
+              <li><i class="fa-solid fa-check text-danger me-2"></i><strong>Componentes:</strong> Frameworks como .NET MAUI, layouts mobile e SQLite.</li>
             </ul>
           </div>
         </div>
@@ -600,33 +642,26 @@
           </tr>
         </thead>
         <tbody>
-                    <tr>
+          <tr>
             <td class="fw-bold text-danger">01</td>
             <td><strong>Sistemas Operacionais</strong></td>
             <td><span class="badge bg-light text-dark border">Infraestrutura</span></td>
           </tr>
-
-
-            <tr>
+          <tr>
             <td class="fw-bold text-danger">02</td>
             <td><strong>Arquitetura de redes com IoT</strong></td>
             <td><span class="badge bg-light text-dark border">Conectividade</span></td>
           </tr>
-
           <tr>
             <td class="fw-bold text-danger">03</td>
             <td><strong>Levantamento de Requisitos</strong></td>
             <td><span class="badge bg-light text-dark border">Engenharia de Software</span></td>
           </tr>
-      
           <tr>
             <td class="fw-bold text-danger">04</td>
             <td><strong>Lógica de Programação e Algoritmos</strong></td>
             <td><span class="badge bg-light text-dark border">Fundamentos</span></td>
           </tr>
-
-        
-          
           <tr>
             <td class="fw-bold text-danger">05</td>
             <td><strong>Linguagem de Marcação</strong></td>
@@ -647,8 +682,7 @@
             <td><strong>Programação Front-End</strong></td>
             <td><span class="badge bg-light text-dark border">Interface de Usuário</span></td>
           </tr>
-
-            <tr>
+          <tr>
             <td class="fw-bold text-danger">09</td>
             <td><strong>Internet das coisas (IoT)</strong></td>
             <td><span class="badge bg-light text-dark border">Sistemas Embarcados</span></td>
@@ -658,7 +692,6 @@
             <td><strong>Programação para Dispositivos Móveis</strong></td>
             <td><span class="badge bg-light text-dark border">Mobile</span></td>
           </tr>
-        
           <tr>
             <td class="fw-bold text-danger">11</td>
             <td><strong>Teste de Software</strong></td>
@@ -773,7 +806,7 @@
             <span class="text-danger fw-bold fs-7 uppercase">Ciclo 1</span>
             <h3 class="turma-title">Turma 1DS (2025 - 2026)</h3>
             <p class="text-muted small mb-0">
-              Foco em lógica computacional, estruturas de banco de dados, desenvolvimento web e primeiros projetos integradores.
+              
             </p>
           </div>
         </div>
@@ -786,8 +819,92 @@
             <span class="text-danger fw-bold fs-7 uppercase">Ciclo 2</span>
             <h3 class="turma-title">Turma 2DS (2026 - 2027)</h3>
             <p class="text-muted small mb-0">
-              Aprofundamento em aplicações mobile, frameworks modernos, APIs RESTful, arquitetura de software e segurança.
+             
             </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALERIA CASA ABERTA -->
+  <section id="casa-aberta">
+    <div class="section-title">
+      <h2>Casa Aberta SENAI</h2>
+      <p class="text-muted mt-2">Registros da participação dos nossos alunos demonstrando projetos, tecnologias e inovações para a comunidade.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Foto 1 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="gallery-card">
+          <img src="./images/hw03.JPG" alt="Demonstração de Tecnologias">
+          <div class="gallery-overlay">
+            <span class="badge bg-danger mb-2 w-auto align-self-start">Hardware</span>
+            <!-- <h3 class="h6 fw-bold text-white mb-1">Workshops Gratuitos</h3>
+            <p class="small text-light mb-0">Minicursos ministrados pelos próprios alunos durante o evento.</p> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Foto 2 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="gallery-card">
+          <img src="./images/hw04.JPG" alt="Demonstração de Tecnologias">
+          <div class="gallery-overlay">
+            <span class="badge bg-danger mb-2 w-auto align-self-start">Hardware</span>
+            <!-- <h3 class="h6 fw-bold text-white mb-1">Integração entre Turmas</h3>
+            <p class="small text-light mb-0">Troca de conhecimento entre os módulos iniciais e concluintes do curso.</p> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Foto 3 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="gallery-card">
+          <img src="./images/hw05.JPG" alt="Demonstração de Tecnologias">
+          <div class="gallery-overlay">
+            <span class="badge bg-danger mb-2 w-auto align-self-start">Hardware</span>
+            <!-- <h3 class="h6 fw-bold text-white mb-1">Encerramento & Destaques</h3>
+            <p class="small text-light mb-0">Celebração das melhores soluções e participação das equipes técnicas.</p> -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Foto 4 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="gallery-card">
+          <img src="./images/c01.JPG" alt="Demonstração de Tecnologias">
+          <div class="gallery-overlay">
+            <span class="badge bg-danger mb-2 w-auto align-self-start">Programação</span>
+            <!-- <h3 class="h6 fw-bold text-white mb-1">Apresentação de Projetos</h3>
+            <p class="small text-light mb-0">Alunos demonstrando os softwares desenvolvidos para a comunidade e visitantes.</p> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Foto 5 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="gallery-card">
+          <img src="./images/c02.JPG" alt="Demonstração de Tecnologias">
+          <div class="gallery-overlay">
+            <span class="badge bg-danger mb-2 w-auto align-self-start">Programação</span>
+            <!-- <h3 class="h6 fw-bold text-white mb-1">Bancadas Interativas</h3>
+            <p class="small text-light mb-0">Demonstração prática de integração entre hardware, microcontroladores e código.</p> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Foto 6 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="gallery-card">
+          <img src="./images/c03.JPG" alt="Demonstração de Tecnologias">
+          <div class="gallery-overlay">
+            <span class="badge bg-danger mb-2 w-auto align-self-start">Programação</span>
+            <!-- <h3 class="h6 fw-bold text-white mb-1">Experiência do Usuário</h3>
+            <p class="small text-light mb-0">Estudantes explicando a arquitetura das aplicações para empresários e visitantes.</p> -->
           </div>
         </div>
       </div>
@@ -863,21 +980,57 @@
     </div>
   </section>
 
+  <!-- MODAL DA GALERIA DE FOTOS (LIGHTBOX) -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark text-white border-secondary shadow-lg">
+        <div class="modal-header border-bottom border-secondary py-2">
+          <div class="d-flex align-items-center gap-2">
+            <span id="modalBadge" class="badge bg-danger"></span>
+            <h5 class="modal-title h6 fw-bold mb-0 text-white" id="modalTitle"></h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        
+        <div class="modal-body text-center position-relative p-2 d-flex align-items-center justify-content-center" style="min-height: 350px;">
+          <!-- Botão Anterior -->
+          <button class="btn btn-danger rounded-circle position-absolute top-50 start-0 translate-middle-y ms-3 z-3 shadow" id="prevBtn" title="Anterior">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          
+          <!-- Imagem Expandida -->
+          <img id="modalImg" src="" class="img-fluid rounded" style="max-height: 70vh; object-fit: contain;" alt="Foto Expandida">
+          
+          <!-- Botão Próximo -->
+          <button class="btn btn-danger rounded-circle position-absolute top-50 end-0 translate-middle-y me-3 z-3 shadow" id="nextBtn" title="Próximo">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="modal-footer border-top border-secondary py-2 d-flex justify-content-between align-items-center">
+          <p id="modalDesc" class="small text-light mb-0"></p>
+          <span id="modalCounter" class="badge bg-secondary"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+    <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
       <span class="small text-center text-md-start">&copy; 2026 SENAI SP - Técnico em Desenvolvimento de Sistemas</span>
-      <div class="d-flex gap-3 small">
+      <!-- <div class="d-flex gap-3 small">
         <a href="#">Termos</a>
         <a href="#">Privacidade</a>
         <a href="#">Suporte</a>
-      </div>
+      </div> -->
     </div>
   </footer>
 
-  <!-- BOOTSTRAP JS & SCRIPT DE ROLAGEM -->
+  <!-- BOOTSTRAP JS & SCRIPTS DA PÁGINA -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // ROLAGEM E NAVEGAÇÃO
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link-custom");
     const navbarCollapse = document.getElementById("navbarSenaiNav");
@@ -906,6 +1059,70 @@
           link.classList.add("active");
         }
       });
+    });
+
+    // LÓGICA DA GALERIA LIGHTBOX
+    const galleryCards = document.querySelectorAll('.gallery-card');
+    const galleryModalEl = document.getElementById('galleryModal');
+    const galleryModal = new bootstrap.Modal(galleryModalEl);
+
+    const modalImg = document.getElementById('modalImg');
+    const modalBadge = document.getElementById('modalBadge');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalCounter = document.getElementById('modalCounter');
+
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentIndex = 0;
+
+    // Mapeia os dados de todas as fotos da galeria com tratamento para elementos ausentes
+    const galleryData = Array.from(galleryCards).map(card => ({
+      src: card.querySelector('img')?.getAttribute('src') || '',
+      alt: card.querySelector('img')?.getAttribute('alt') || 'Foto da Galeria',
+      badge: card.querySelector('.badge')?.textContent || 'Casa Aberta',
+      title: card.querySelector('h3')?.textContent || card.querySelector('img')?.getAttribute('alt') || 'Galeria',
+      desc: card.querySelector('p')?.textContent || ''
+    }));
+
+    // Atualiza as informações do modal de expansão
+    function updateModalContent(index) {
+      currentIndex = index;
+      const item = galleryData[currentIndex];
+      
+      modalImg.src = item.src;
+      modalImg.alt = item.alt;
+      modalBadge.textContent = item.badge;
+      modalTitle.textContent = item.title;
+      modalDesc.textContent = item.desc;
+      modalCounter.textContent = `${currentIndex + 1} / ${galleryData.length}`;
+    }
+
+    // Clique para expandir qualquer foto
+    galleryCards.forEach((card, index) => {
+      card.addEventListener('click', () => {
+        updateModalContent(index);
+        galleryModal.show();
+      });
+    });
+
+    // Botões de navegação no modal
+    prevBtn.addEventListener('click', () => {
+      const prevIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+      updateModalContent(prevIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      const nextIndex = (currentIndex + 1) % galleryData.length;
+      updateModalContent(nextIndex);
+    });
+
+    // Navegação usando as setas do teclado (Esquerda / Direita)
+    document.addEventListener('keydown', (e) => {
+      if (!galleryModalEl.classList.contains('show')) return;
+      if (e.key === 'ArrowLeft') prevBtn.click();
+      if (e.key === 'ArrowRight') nextBtn.click();
     });
   </script>
 </body>
